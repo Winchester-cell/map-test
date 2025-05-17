@@ -3,36 +3,70 @@
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --colorA: #F5F8FE;
-    --colorB: #1B254B;
+  --colorA: #F5F8FE;
+  --colorB: #1B254B;
 }
 
 .dark {
-    --colorA: #0B1437;
-    --colorB: #FFFFFF;
+  --colorA: #0B1437;
+  --colorB: #FFFFFF;
 }
 
-.bg{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--colorA);
-    color: var(--colorB);
-    width: 100dvw;
-    height: 100dvh;
+.bg {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colorA);
+  color: var(--colorB);
+  width: 100dvw;
+  height: 100dvh;
 }
 
-button{
-    color: var(--colorB);
-    border: none;
-    outline: none;
-    background: none;
+button {
+  color: var(--colorB);
+  border: none;
+  outline: none;
+  background: none;
 }
 
+
+.blinking-circle {
+  width: 16px;
+  height: 16px;
+  background-color: #17a81c;
+  border: 2px solid black;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+  position: relative;
+}
+
+.blinking-circle::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid green;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
