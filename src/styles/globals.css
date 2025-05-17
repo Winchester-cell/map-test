@@ -1,42 +1,38 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+    --colorA: #F5F8FE;
+    --colorB: #1B254B;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.dark {
+    --colorA: #0B1437;
+    --colorB: #FFFFFF;
 }
+
+.bg{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorA);
+    color: var(--colorB);
+    width: 100dvw;
+    height: 100dvh;
+}
+
+button{
+    color: var(--colorB);
+    border: none;
+    outline: none;
+    background: none;
+}
+
