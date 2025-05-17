@@ -38,7 +38,7 @@ export default function MapView() {
 
         // L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png').addTo(map);
 
-        L.tileLayer(`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${process.env.apiKey}`).addTo(map);
+        L.tileLayer(`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=2caa2f4f-00f2-47a0-ba76-37bf1e0f7940`).addTo(map);
 
 
         // Add markers for all devices
